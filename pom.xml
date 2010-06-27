@@ -1,0 +1,52 @@
+<project>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>DeepaMehta 3 Icon Picker</name>
+    <groupId>de.deepamehta</groupId>
+    <artifactId>deepamehta3-iconpicker</artifactId>
+    <version>0.4-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.deepamehta</groupId>
+            <artifactId>deepamehta3-core</artifactId>
+            <version>0.4-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            de.deepamehta.plugins.iconpicker.migrations
+                        </Export-Package>
+                        <Private-Package>
+                            de.deepamehta.plugins.iconpicker.*
+                        </Private-Package>
+                        <Bundle-Activator>de.deepamehta.core.service.Plugin</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

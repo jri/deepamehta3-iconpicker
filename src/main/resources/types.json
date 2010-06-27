@@ -1,0 +1,13 @@
+[
+    {
+        type_id: "Icon",
+        fields: [
+            {id: "Name",         model: {type: "text"}, view: {editor: "single line"}},
+            {id: "Description",  model: {type: "html"}, view: {editor: "multi line"}}
+        ],
+        view: {
+            icon_src: "/de.deepamehta.3-iconpicker/images/colored-boxes.png"
+        },
+        implementation: "PlainDocument"
+    }
+]
