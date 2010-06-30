@@ -1,4 +1,4 @@
-function dm3_icons() {
+function dm3_iconpicker() {
 
 
 
@@ -20,17 +20,17 @@ function dm3_icons() {
 
     this.render_form_field = function(field, doc, rel_topics) {
         if (field.model.type == "relation" && field.view.editor == "iconpicker") {
-            var a = $("<a>").attr({href: "", id: "field_" + field.id, title: "Choose Icon"}).click(open_icon_dialog)
+            var a = $("<a>").attr({href: "#", "field-uri": field.uri, title: "Choose Icon"}).click(open_icon_dialog)
             return a.append(render_topics_icon(rel_topics))
         }
     }
 
     this.get_field_content = function(field, doc) {
         if (field.model.type == "relation" && field.view.editor == "iconpicker") {
-            var icons = PlainDocument.prototype.topic_buffer[field.id]
+            var icons = get_doctype_impl(doc).topic_buffer[field.uri]
             var old_icon_id = icons.length && icons[0].id
-            var new_icon_id = $("#field_" + field.id + " img").attr("id")
-            // alert("Old selection of field \"" + field.id + "\": " + icons.length + " icons.\n" +
+            var new_icon_id = $("[field-uri=" + field.uri + "] img").attr("id")
+            // alert("Old selection of field \"" + field.uri + "\": " + icons.length + " icons.\n" +
             //     (icons.length ? JSON.stringify(icons[0]) + "\n" : "") + "New selected icon: " + new_icon_id)
             if (old_icon_id) {
                 if (old_icon_id != new_icon_id) {
@@ -133,7 +133,7 @@ function dm3_icons() {
 /**
  * @return  ID of "Icon" topic, or undefined.
  */
-dm3_icons.by_attachment = function(icon_src) {
+dm3_iconpicker.by_attachment = function(icon_src) {
     var rows = db.view("deepamehta3/dm3-icons_by-attachment", {key: icon_src}).rows
     if (rows.length) {
         return rows[0].id

@@ -1,13 +1,19 @@
 [
     {
-        type_id: "Icon",
+        uri: "http://www.deepamehta.de/core/topictype/Icon",
         fields: [
-            {id: "Name",         model: {type: "text"}, view: {editor: "single line"}},
-            {id: "Description",  model: {type: "html"}, view: {editor: "multi line"}}
+            {
+                uri: "http://www.deepamehta.de/core/property/Name",
+                model: {type: "text"},
+                view: {label: "Name", editor: "single line"}
+            },
+            {
+                uri: "http://www.deepamehta.de/core/property/Description",
+                model: {type: "html"},
+                view: {label: "Description", editor: "multi line"}
+            }
         ],
-        view: {
-            icon_src: "/de.deepamehta.3-iconpicker/images/colored-boxes.png"
-        },
+        view: {label: "Icon", icon_src: "/de.deepamehta.3-iconpicker/images/colored-boxes.png"},
         implementation: "PlainDocument"
     }
 ]
