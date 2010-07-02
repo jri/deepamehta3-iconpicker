@@ -42,7 +42,7 @@
                         <Private-Package>
                             de.deepamehta.plugins.iconpicker.*
                         </Private-Package>
-                        <Bundle-Activator>de.deepamehta.core.service.Plugin</Bundle-Activator>
+                        <Bundle-Activator>de.deepamehta.plugins.iconpicker.IconPickerPlugin</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
