@@ -61,7 +61,7 @@ function dm3_iconpicker() {
 
     function open_icon_dialog() {
         // query icon topics
-        var icon_topics = dmc.get_topics("http://www.deepamehta.de/core/topictype/Icon")
+        var icon_topics = dmc.get_topics("de/deepamehta/core/topictype/Icon")
         // fill dialog with icons
         $("#icon_dialog").empty()
         for (var i = 0, icon_topic; icon_topic = icon_topics[i]; i++) {
@@ -96,7 +96,7 @@ function dm3_iconpicker() {
      * @param   icon_topic    a topic of type "Icon"
      */
     function render_icon(icon_topic) {
-        var icon_src = icon_topic.properties["http://www.deepamehta.de/core/property/IconSource"]
+        var icon_src = icon_topic.properties["de/deepamehta/core/property/IconSource"]
         return $("<img>").attr({"icon-topic-id": icon_topic.id, src: icon_src}).addClass("type-icon")
     }
 }

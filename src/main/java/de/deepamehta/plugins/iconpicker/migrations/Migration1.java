@@ -58,13 +58,13 @@ public class Migration1 extends Migration {
     }
 
     private Topic getIconTopic(String iconSrc) {
-        return dms.getTopic("http://www.deepamehta.de/core/property/IconSource", iconSrc);
+        return dms.getTopic("de/deepamehta/core/property/IconSource", iconSrc);
     }
 
     private Topic createIconTopic(String iconSrc) {
         Map properties = new HashMap();
-        properties.put("http://www.deepamehta.de/core/property/IconSource", iconSrc);
-        return dms.createTopic("http://www.deepamehta.de/core/topictype/Icon", properties, null);
+        properties.put("de/deepamehta/core/property/IconSource", iconSrc);
+        return dms.createTopic("de/deepamehta/core/topictype/Icon", properties, null);
     }
 
     private void relateTypeToIcon(long typeId, long iconId) {

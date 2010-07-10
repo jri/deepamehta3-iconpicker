@@ -26,9 +26,9 @@ public class IconPickerPlugin extends Plugin {
 
     @Override
     public void providePropertiesHook(Topic topic) {
-        if (topic.typeUri.equals("http://www.deepamehta.de/core/topictype/Icon")) {
-            topic.setProperty("http://www.deepamehta.de/core/property/IconSource",
-                dms.getTopicProperty(topic.id, "http://www.deepamehta.de/core/property/IconSource"));
+        if (topic.typeUri.equals("de/deepamehta/core/topictype/Icon")) {
+            topic.setProperty("de/deepamehta/core/property/IconSource",
+                dms.getTopicProperty(topic.id, "de/deepamehta/core/property/IconSource"));
         }
     }
 }

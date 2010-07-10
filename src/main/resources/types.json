@@ -1,20 +1,20 @@
 [
     {
-        uri: "http://www.deepamehta.de/core/topictype/Icon",
+        uri: "de/deepamehta/core/topictype/Icon",
         fields: [
             {
-                uri:   "http://www.deepamehta.de/core/property/Name",
+                uri:   "de/deepamehta/core/property/Name",
                 model: {type: "text"},
                 view:  {label: "Name", editor: "single line"}
             },
             {
-                uri:   "http://www.deepamehta.de/core/property/IconSource",
+                uri:   "de/deepamehta/core/property/IconSource",
                 model: {type: "text"},
                 view:  {label: "Icon File", editor: "single line"},
                 indexing_mode: "KEY"
             },
             {
-                uri:   "http://www.deepamehta.de/core/property/Description",
+                uri:   "de/deepamehta/core/property/Description",
                 model: {type: "html"},
                 view:  {label: "Description", editor: "multi line"}
             }
