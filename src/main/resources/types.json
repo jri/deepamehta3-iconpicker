@@ -1,6 +1,9 @@
 [
     {
+        label: "Icon",
         uri: "de/deepamehta/core/topictype/Icon",
+        icon_src: "/de.deepamehta.3-iconpicker/images/colored-boxes.png",
+        js_renderer_class: "PlainDocument",
         fields: [
             {
                 label: "Name",
@@ -20,8 +23,6 @@
                 uri: "de/deepamehta/core/property/Description",
                 data_type: "html"
             }
-        ],
-        view: {label: "Icon", icon_src: "/de.deepamehta.3-iconpicker/images/colored-boxes.png"},
-        implementation: "PlainDocument"
+        ]
     }
 ]
