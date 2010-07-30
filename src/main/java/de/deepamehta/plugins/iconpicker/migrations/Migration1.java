@@ -20,8 +20,7 @@ public class Migration1 extends Migration {
     // -------------------------------------------------------------------------------------------------- Public Methods
 
     @Override
-    public void run() throws Exception {
-        readTypesFromFile("/types.json");
+    public void run() {
         createIconTopics();
     }
 
