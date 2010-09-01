@@ -37,7 +37,7 @@ public class Migration1 extends Migration {
             } else {
                 logger.info("  # Type has icon_src declaration: \"" + iconSrc + "\" -> icon topic is needed");
             }
-            //
+            // create icon topic
             Topic iconTopic = getIconTopic(iconSrc);
             if (iconTopic == null) {
                 iconTopic = createIconTopic(iconSrc);
@@ -45,8 +45,8 @@ public class Migration1 extends Migration {
             } else {
                 logger.info("  # Icon topic for that source exists already (ID=" + iconTopic.id + ")");
             }
-            //
-            Relation relation = dms.getRelation(type.id, iconTopic.id);
+            // relate type to icon
+            Relation relation = dms.getRelation(type.id, iconTopic.id, "RELATION", true);
             if (relation == null) {
                 relateTypeToIcon(type.id, iconTopic.id);
                 logger.info("  # Creating relation between type and icon topic");
