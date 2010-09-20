@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 
 
-public class Migration1 extends Migration {
+public class Migration2 extends Migration {
 
     // ---------------------------------------------------------------------------------------------- Instance Variables
 
