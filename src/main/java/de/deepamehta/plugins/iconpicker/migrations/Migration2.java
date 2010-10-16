@@ -11,6 +11,15 @@ import java.util.logging.Logger;
 
 
 
+/**
+ * Distributed with deepamehta3-iconpicker 0.4.1.
+ * <p>
+ * Note: in deepamehta3-iconpicker 0.4 this was part of migration 1 (along with a declarative part).
+ * In deepamehta3-iconpicker 0.4.1 this imperative part was separated as migration 2.
+ * (Since deepamehta3-core 0.4.1 a migration can't have both anymore, a declarative and an imperative part.)
+ * So, when updating from deepamehta3-iconpicker 0.4 to 0.4.1 this part has been run already.
+ * This migration is set to run only while a clean install of deepamehta3-iconpicker 0.4.1.
+ */
 public class Migration2 extends Migration {
 
     // ---------------------------------------------------------------------------------------------- Instance Variables
