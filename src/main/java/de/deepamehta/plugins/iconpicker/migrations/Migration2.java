@@ -38,7 +38,7 @@ public class Migration2 extends Migration {
     private void createIconTopics() {
         for (String typeURI : dms.getTopicTypeUris()) {
             logger.info("### Handling icon topic for type " + typeURI + " ...");
-            TopicType type = dms.getTopicType(typeURI);
+            TopicType type = dms.getTopicType(typeURI, null);   // clientContext=null
             String iconSrc = (String) type.getProperty("icon_src", null);
             if (iconSrc == null) {
                 logger.info("  # Type has no icon_src declaration -> no icon topic needed");
